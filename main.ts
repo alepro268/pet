@@ -60,5 +60,17 @@ basic.forever(function () {
         neutral.showImage(0)
         expressions += -1
         basic.pause(5000)
+        sad.showImage(5)
+    }
+})
+basic.forever(function () {
+    if (input.lightLevel() <= 75) {
+        scared.showImage(0)
+        expressions += -1
+    } else if (input.lightLevel() <= 155) {
+        neutral.showImage(0)
+    } else {
+        scared.showImage(0)
+        expressions += -1
     }
 })
